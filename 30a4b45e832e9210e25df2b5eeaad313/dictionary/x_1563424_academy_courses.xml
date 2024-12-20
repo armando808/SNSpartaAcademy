@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d1fcfc1a836e9210e25df2b5eeaad37e" label="Courses" max_length="40" name="x_1563424_academy_courses" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="n_a" label="Stream" mandatory="true" max_length="40" name="stream" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Dev Ops" value="dev_ops"/>
+                <element inactive_on_update="false" label="C# Test" value="c_test"/>
+                <element inactive_on_update="false" label="Data Engineering" value="data_engineering"/>
+                <element inactive_on_update="false" label="Java Dev" value="java_dev"/>
+                <element inactive_on_update="false" label="N/A" value="n_a"/>
+                <element inactive_on_update="false" label="ServiceNow App Dev" value="servicenow_app_dev"/>
+                <element inactive_on_update="false" label="C# Dev" value="c_dev"/>
+                <element inactive_on_update="false" label="Java Test" value="java_test"/>
+                <element inactive_on_update="false" label="Business Solutions" value="business_solutions"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="tentative" display="true" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" value="cancelled"/>
+                <element inactive_on_update="false" label="Complete" value="complete"/>
+                <element inactive_on_update="false" label="In Progress" value="in_progress"/>
+                <element inactive_on_update="false" label="Tentative" value="tentative"/>
+            </choice>
+        </element>
+    </element>
+</database>
