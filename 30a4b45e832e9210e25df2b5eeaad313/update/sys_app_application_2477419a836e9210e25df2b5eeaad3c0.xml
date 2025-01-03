@@ -7,14 +7,14 @@
         <hint>An app to track courses offered at Sparta Global</hint>
         <name/>
         <order/>
-        <roles>x_1563424_academy.academy_admin</roles>
+        <roles>x_1563424_academy.academy_admin,x_1563424_academy.enrollment_admin</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-12-20 12:14:17</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2477419a836e9210e25df2b5eeaad3c0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Academy</sys_name>
         <sys_overrides/>
         <sys_package display_value="Academy" source="x_1563424_academy">30a4b45e832e9210e25df2b5eeaad313</sys_package>
@@ -22,7 +22,7 @@
         <sys_scope display_value="Academy">30a4b45e832e9210e25df2b5eeaad313</sys_scope>
         <sys_update_name>sys_app_application_2477419a836e9210e25df2b5eeaad3c0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-12-20 12:14:17</sys_updated_on>
+        <sys_updated_on>2024-12-24 14:29:11</sys_updated_on>
         <title>Academy</title>
         <view_name/>
     </sys_app_application>

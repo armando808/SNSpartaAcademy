@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ae43461283e2d210e25df2b5eeaad343" label="Course Enrollments" max_length="40" name="x_1563424_academy_course_enrollments" type="collection">
+        <element label="Course" max_length="32" name="course" reference="x_1563424_academy_courses" type="reference"/>
+        <element label="Student" max_length="32" name="student" reference="x_1563424_academy_students" type="reference"/>
+        <index name="index">
+            <element name="course"/>
+        </index>
+        <index name="index2">
+            <element name="student"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1563424_academy_courses</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update Course Status</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[// Get the current date and time as a GlideDateTime object
+var now = new GlideDateTime();
+
+if (current.start_date && current.end_date) {
+    // Convert the start_date and end_date fields to GlideDateTime objects
+    var startDate = new GlideDateTime(current.start_date);
+    var endDate = new GlideDateTime(current.end_date);
+
+    // Check if the status is explicitly set to "Tentative" during record creation
+    if (current.isNewRecord() && current.status == 'Tentative') {
+        // Do nothing - leave the status as "Tentative"
+    }
+    // Check if both dates are in the future
+    else if (now.compareTo(startDate) < 0 && now.compareTo(endDate) < 0) {
+        current.status = 'Upcoming';
+    }
+    // Check if the course has started but not yet ended
+    else if (now.compareTo(startDate) >= 0 && now.compareTo(endDate) < 0) {
+        current.status = 'In Progress';
+    }
+    // Check if the course has ended
+    else if (now.compareTo(endDate) >= 0) {
+        current.status = 'Completed';
+    }
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 15:20:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>73479e23832a5a10e25df2b5eeaad31f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Update Course Status</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Academy" source="x_1563424_academy">30a4b45e832e9210e25df2b5eeaad313</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Academy">30a4b45e832e9210e25df2b5eeaad313</sys_scope>
+        <sys_update_name>sys_script_73479e23832a5a10e25df2b5eeaad31f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 15:40:40</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=73479e23832a5a10e25df2b5eeaad31f"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>73479e23832a5a10e25df2b5eeaad31f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 15:20:49</sys_created_on>
+        <sys_id>088856a3832a5a10e25df2b5eeaad364</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 15:20:49</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
